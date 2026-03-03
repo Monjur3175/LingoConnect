@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - LingoConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
+                        <path d="M11 2L3 7V13L11 18L19 13V7L11 2Z" stroke="#0f7ff0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11 2V18" stroke="#0f7ff0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 7L19 13" stroke="#0f7ff0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19 7L3 13" stroke="#0f7ff0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="logo-text">Lingoconnect</div>
+            </a>
+            
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="find-teacher.html" class="nav-link">Find Teacher</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="author.html" class="nav-link">Author</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="header-buttons">
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <a href="login.html" class="btn btn-secondary">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="section">
+            <div class="container text-center">
+                <h1>Language Learning Blog</h1>
+                <p style="font-size: 20px; color: #475569; max-width: 600px; margin: 0 auto 40px;">
+                    Tips, strategies, and insights to help you master new languages faster and more effectively.
+                </p>
+                
+                <!-- Category Filters -->
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+                    <button class="btn btn-primary">All Posts</button>
+                    <button class="btn btn-outline">Learning Tips</button>
+                    <button class="btn btn-outline">Culture</button>
+                    <button class="btn btn-outline">Technology</button>
+                    <button class="btn btn-outline">Success Stories</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Post -->
+        <section class="section">
+            <div class="container">
+                <article style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 48px;">
+                    <div style="background: url('Images/blog-featured.jpg') center/cover; height: 300px; position: relative;">
+                        <div style="position: absolute; top: 24px; left: 24px; background: white; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; color: #0f7ff0;">
+                            FEATURED
+                        </div>
+                    </div>
+                    <div style="padding: 40px;">
+                        <div style="display: flex; gap: 16px; margin-bottom: 24px;">
+                            <span style="color: #0f7ff0; font-size: 14px; font-weight: 500;">Learning Tips</span>
+                            <span style="color: #64748b; font-size: 14px;">•</span>
+                            <span style="color: #64748b; font-size: 14px;">5 min read</span>
+                        </div>
+                        
+                        <h2 style="font-size: 32px; margin-bottom: 16px;">The Science Behind Language Learning: How Your Brain Adapts</h2>
+                        
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+                            <div style="width: 40px; height: 40px; border-radius: 50%; background: url('Images/author-featured.jpg') center/cover;"></div>
+                            <div>
+                                <div style="font-weight: 600; color: #334155;">Dr. Alexandra Martinez</div>
+                                <div style="color: #64748b; font-size: 14px;">March 15, 2026</div>
+                            </div>
+                        </div>
+                        
+                        <p style="font-size: 18px; line-height: 28px; color: #475569; margin-bottom: 24px;">
+                            Discover the fascinating neurological processes that occur when you learn a new language, and how understanding these mechanisms can accelerate your learning journey.
+                        </p>
+                        
+                        <a href="#" style="color: #0f7ff0; font-weight: 500; text-decoration: none; font-size: 16px;">Read Full Article →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Blog Posts Grid -->
+        <section class="section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 48px;">Recent Articles</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px;">
+                    <!-- Blog Post 1 -->
+                    <article class="testimonial-card">
+                        <div style="background: url('Images/blog-1.jpg') center/cover; height: 200px; border-radius: 12px 12px 0 0;"></div>
+                        <div style="padding: 24px;">
+                            <div style="display: flex; gap: 16px; margin-bottom: 16px;">
+                                <span style="color: #0f7ff0; font-size: 14px; font-weight: 500;">Learning Tips</span>
+                                <span style="color: #64748b; font-size: 14px;">•</span>
+                                <span style="color: #64748b; font-size: 14px;">3 min read</span>
+                            </div>
+                            
+                            <h3 style="font-size: 20px; margin-bottom: 12px;">10 Common Mistakes Language Learners Make</h3>
+                            
+                            <p style="color: #475569; font-size: 14px; line-height: 22px; margin-bottom: 16px;">
+                                Avoid these pitfalls that can slow down your language learning progress and discover better alternatives.
+                            </p>
+                            
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                                <div style="width: 32px; height: 32px; border-radius: 50%; background: url('Images/author-1.jpg') center/cover;"></div>
+                                <div>
+                                    <div style="font-weight: 500; color: #334155; font-size: 14px;">Sarah Chen</div>
+                                    <div style="color: #64748b; font-size: 12px;">March 12, 2026</div>
+                                </div>
+                            </div>
+                            
+                            <a href="#" style="color: #0f7ff0; font-weight: 500; text-decoration: none;">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 2 -->
+                    <article class="testimonial-card">
+                        <div style="background: url('Images/blog-2.jpg') center/cover; height: 200px; border-radius: 12px 12px 0 0;"></div>
+                        <div style="padding: 24px;">
+                            <div style="display: flex; gap: 16px; margin-bottom: 16px;">
+                                <span style="color: #0f7ff0; font-size: 14px; font-weight: 500;">Culture</span>
+                                <span style="color: #64748b; font-size: 14px;">•</span>
+                                <span style="color: #64748b; font-size: 14px;">5 min read</span>
+                            </div>
+                            
+                            <h3 style="font-size: 20px; margin-bottom: 12px;">How Cultural Understanding Enhances Language Learning</h3>
+                            
+                            <p style="color: #475569; font-size: 14px; line-height: 22px; margin-bottom: 16px;">
+                                Learn why understanding cultural context is crucial for true language fluency and how to immerse yourself effectively.
+                            </p>
+                            
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                                <div style="width: 32px; height: 32px; border-radius: 50%; background: url('Images/author-2.jpg') center/cover;"></div>
+                                <div>
+                                    <div style="font-weight: 500; color: #334155; font-size: 14px;">Maria Rodriguez</div>
+                                    <div style="color: #64748b; font-size: 12px;">March 10, 2026</div>
+                                </div>
+                            </div>
+                            
+                            <a href="#" style="color: #0f7ff0; font-weight: 500; text-decoration: none;">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 3 -->
+                    <article class="testimonial-card">
+                        <div style="background: url('Images/blog-3.jpg') center/cover; height: 200px; border-radius: 12px 12px 0 0;"></div>
+                        <div style="padding: 24px;">
+                            <div style="display: flex; gap: 16px; margin-bottom: 16px;">
+                                <span style="color: #0f7ff0; font-size: 14px; font-weight: 500;">Technology</span>
+                                <span style="color: #64748b; font-size: 14px;">•</span>
+                                <span style="color: #64748b; font-size: 14px;">4 min read</span>
+                            </div>
+                            
+                            <h3 style="font-size: 20px; margin-bottom: 12px;">AI in Language Learning: Friend or Foe?</h3>
+                            
+                            <p style="color: #475569; font-size: 14px; line-height: 22px; margin-bottom: 16px;">
+                                Explore how artificial intelligence is revolutionizing language education and the best ways to leverage these tools.
+                            </p>
+                            
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                                <div style="width: 32px; height: 32px; border-radius: 50%; background: url('Images/author-3.jpg') center/cover;"></div>
+                                <div>
+                                    <div style="font-weight: 500; color: #334155; font-size: 14px;">David Kim</div>
+                                    <div style="color: #64748b; font-size: 12px;">March 8, 2026</div>
+                                </div>
+                            </div>
+                            
+                            <a href="#" style="color: #0f7ff0; font-weight: 500; text-decoration: none;">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 4 -->
+                    <article class="testimonial-card">
+                        <div style="background: url('Images/blog-4.jpg') center/cover; height: 200px; border-radius: 12px 12px 0 0;"></div>
+                        <div style="padding: 24px;">
+                            <div style="display: flex; gap: 16px; margin-bottom: 16px;">
+                                <span style="color: #0f7ff0; font-size: 14px; font-weight: 500;">Success Stories</span>
+                                <span style="color: #64748b; font-size: 14px;">•</span>
+                                <span style="color: #64748b; font-size: 14px;">6 min read</span>
+                            </div>
+                            
+                            <h3 style="font-size: 20px; margin-bottom: 12px;">From Zero to Fluent: James' 6-Month Spanish Journey</h3>
+                            
+                            <p style="color: #475569; font-size: 14px; line-height: 22px; margin-bottom: 16px;">
+                                Follow the inspiring story of how James went from complete beginner to confident Spanish speaker in just six months.
+                            </p>
+                            
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                                <div style="width: 32px; height: 32px; border-radius: 50%; background: url('Images/author-4.jpg') center/cover;"></div>
+                                <div>
+                                    <div style="font-weight: 500; color: #334155; font-size: 14px;">Emily Johnson</div>
+                                    <div style="color: #64748b; font-size: 12px;">March 5, 2026</div>
+                                </div>
+                            </div>
+                            
+                            <a href="#" style="color: #0f7ff0; font-weight: 500; text-decoration: none;">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 5 -->
+                    <article class="testimonial-card">
+                        <div style="background: url('Images/blog-5.jpg') center/cover; height: 200px; border-radius: 12px 12px 0 0;"></div>
+                        <div style="padding: 24px;">
+                            <div style="display: flex; gap: 16px; margin-bottom: 16px;">
+                                <span style="color: #0f7ff0; font-size: 14px; font-weight: 500;">Learning Tips</span>
+                                <span style="color: #64748b; font-size: 14px;">•</span>
+                                <span style="color: #64748b; font-size: 14px;">4 min read</span>
+                            </div>
+                            
+                            <h3 style="font-size: 20px; margin-bottom: 12px;">The Power of Spaced Repetition in Vocabulary Building</h3>
+                            
+                            <p style="color: #475569; font-size: 14px; line-height: 22px; margin-bottom: 16px;">
+                                Learn the science-backed technique that can help you remember vocabulary words for years to come.
+                            </p>
+                            
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                                <div style="width: 32px; height: 32px; border-radius: 50%; background: url('Images/author-5.jpg') center/cover;"></div>
+                                <div>
+                                    <div style="font-weight: 500; color: #334155; font-size: 14px;">Michael Rodriguez</div>
+                                    <div style="color: #64748b; font-size: 12px;">March 2, 2026</div>
+                                </div>
+                            </div>
+                            
+                            <a href="#" style="color: #0f7ff0; font-weight: 500; text-decoration: none;">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 6 -->
+                    <article class="testimonial-card">
+                        <div style="background: url('Images/blog-6.jpg') center/cover; height: 200px; border-radius: 12px 12px 0 0;"></div>
+                        <div style="padding: 24px;">
+                            <div style="display: flex; gap: 16px; margin-bottom: 16px;">
+                                <span style="color: #0f7ff0; font-size: 14px; font-weight: 500;">Culture</span>
+                                <span style="color: #64748b; font-size: 14px;">•</span>
+                                <span style="color: #64748b; font-size: 14px;">5 min read</span>
+                            </div>
+                            
+                            <h3 style="font-size: 20px; margin-bottom: 12px;">Language Learning Through Music: A Melodic Approach</h3>
+                            
+                            <p style="color: #475569; font-size: 14px; line-height: 22px; margin-bottom: 16px;">
+                                Discover how using music in your target language can accelerate your learning and make it more enjoyable.
+                            </p>
+                            
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                                <div style="width: 32px; height: 32px; border-radius: 50%; background: url('Images/author-6.jpg') center/cover;"></div>
+                                <div>
+                                    <div style="font-weight: 500; color: #334155; font-size: 14px;">Isabella Romano</div>
+                                    <div style="color: #64748b; font-size: 12px;">February 28, 2026</div>
+                                </div>
+                            </div>
+                            
+                            <a href="#" style="color: #0f7ff0; font-weight: 500; text-decoration: none;">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Load More Button -->
+                <div style="text-align: center; margin-top: 48px;">
+                    <button class="btn btn-outline btn-large">Load More Articles</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="features">
+            <div class="container">
+                <div style="background: linear-gradient(135deg, #0f7ff0 0%, #3b82f6 100%); border-radius: 16px; padding: 48px; text-align: center; color: white;">
+                    <h2 style="color: white; margin-bottom: 16px;">Stay Updated with Language Learning Tips</h2>
+                    <p style="font-size: 18px; margin-bottom: 32px; opacity: 0.9;">
+                        Get our weekly newsletter with the latest insights, tips, and resources for language learners.
+                    </p>
+                    <div style="display: flex; gap: 16px; justify-content: center; max-width: 400px; margin: 0 auto;">
+                        <input type="email" placeholder="Enter your email" style="flex: 1; padding: 12px; border: none; border-radius: 8px; font-size: 14px;">
+                        <button class="btn" style="background: white; color: #0f7ff0;">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 3L4 8V16L12 21L20 16V8L12 3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 3V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="footer-logo-text">Lingoconnect</div>
+                    </div>
+                    <p class="footer-description">Master any language through live conversations with expert tutors worldwide.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul class="footer-links">
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="find-teacher.html">Find a Tutor</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">© 2026 LingoConnect Inc. All rights reserved.</div>
+                <div class="footer-legal">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

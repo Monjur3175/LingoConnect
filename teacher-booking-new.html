@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Lesson - LingoConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/Overlay.png" type="image/png">
+</head>
+<body style="background: #f5f7f8; margin: 0; padding: 0; font-family: 'Lexend', sans-serif;">
+    <!-- Header -->
+    <header style="background: white; border-bottom: 1px solid #e2e8f0; backdrop-filter: blur(6px); background: rgba(255,255,255,0.8); position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 80px; max-width: 1280px; margin: 0 auto;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="background: rgba(15,127,240,0.1); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                    <img src="Images/Overlay.png" alt="LingoConnect" style="width: 20px; height: 20px;">
+                </div>
+                <div style="font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 20px; color: #0f172a; letter-spacing: -0.5px;">Lingoconnect</div>
+            </div>
+            
+            <nav style="display: flex; gap: 40px; flex: 1; justify-content: center;">
+                <a href="index.html" style="font-family: 'Lexend', sans-serif; font-weight: 500; font-size: 14px; color: #334155; text-decoration: none;">Home</a>
+                <a href="courses.html" style="font-family: 'Lexend', sans-serif; font-weight: 500; font-size: 14px; color: #334155; text-decoration: none;">Courses</a>
+                <a href="find-teacher.html" style="font-family: 'Lexend', sans-serif; font-weight: 500; font-size: 14px; color: #334155; text-decoration: none;">Find Teacher</a>
+                <a href="about.html" style="font-family: 'Lexend', sans-serif; font-weight: 500; font-size: 14px; color: #334155; text-decoration: none;">About</a>
+                <a href="author.html" style="font-family: 'Lexend', sans-serif; font-weight: 500; font-size: 14px; color: #334155; text-decoration: none;">Author</a>
+                <a href="contact.html" style="font-family: 'Lexend', sans-serif; font-weight: 500; font-size: 14px; color: #334155; text-decoration: none;">Contact</a>
+            </nav>
+            
+            <div style="display: flex; gap: 12px;">
+                <button style="background: #0f7ff0; color: white; border: none; padding: 16px; border-radius: 8px; font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 14px; cursor: pointer; box-shadow: 0px 4px 6px -1px rgba(15,127,240,0.2), 0px 2px 4px -2px rgba(15,127,240,0.2);">Sign Up</button>
+                <button style="background: #e2e8f0; color: #0f172a; border: none; padding: 16px; border-radius: 8px; font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 14px; cursor: pointer;">Login</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding-top: 65px;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 80px; padding: 0 80px; max-width: 976px; margin: 0 auto; min-height: 100vh;">
+            
+            <!-- Teacher Hero Section -->
+            <div style="height: 327px; position: relative; width: 100%;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                    <div>
+                        <div style="background: rgba(15,127,240,0.1); display: inline-flex; align-items: center; justify-content: center; padding: 4px 12px; border-radius: 9999px; margin-bottom: 16px;">
+                            <span style="font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 12px; color: #0f7ff0; letter-spacing: 0.6px; text-transform: uppercase;">Book Your Lesson</span>
+                        </div>
+                        
+                        <h1 id="teacher-name" style="font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 48px; line-height: 48px; color: #0f172a; margin-bottom: 16px; letter-spacing: -1.2px;">Teacher Name</h1>
+                        
+                        <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 20px;">
+                            <span id="teacher-language" style="font-family: 'Lexend', sans-serif; font-weight: 400; font-size: 18px; color: #475569;">Language</span>
+                            <span style="font-size: 18px; color: #475569;">•</span>
+                            <span id="teacher-experience" style="font-family: 'Lexend', sans-serif; font-weight: 400; font-size: 18px; color: #475569;">Experience</span>
+                            <span style="font-size: 18px; color: #475569;">•</span>
+                            <span id="teacher-certification" style="font-family: 'Lexend', sans-serif; font-weight: 400; font-size: 18px; color: #475569;">Certification</span>
+                        </div>
+                        
+                        <p id="teacher-description" style="font-family: 'Lexend', sans-serif; font-weight: 400; font-size: 20px; line-height: 32.5px; color: #475569; max-width: 672px; margin-bottom: 32px;">
+                            Teacher description will appear here.
+                        </p>
+                        
+                        <div style="display: flex; gap: 16px; align-items: center;">
+                            <button style="background: #0f7ff0; color: white; border: none; padding: 13px 32px; border-radius: 8px; font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 16px; cursor: pointer; box-shadow: 0px 10px 15px -3px rgba(15,127,240,0.3), 0px 4px 6px -4px rgba(15,127,240,0.3); position: relative;">
+                                <span style="position: relative; z-index: 1;">Book Now</span>
+                            </button>
+                            <button style="background: white; color: #0f172a; border: 1px solid #e2e8f0; padding: 13px 33px; border-radius: 8px; font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 16px; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 2L6 6L10 10L14 4" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>View Profile</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div style="position: relative;">
+                        <div style="background: white; border: 4px solid white; padding: 4px; border-radius: 16px; box-shadow: 0px 25px 50px -12px rgba(0,0,0,0.25); width: 256px; height: 256px; transform: rotate(2deg);">
+                            <img id="teacher-image" src="Images/teacher-placeholder.jpg" alt="Teacher" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Form Section -->
+            <div style="background: white; padding: 80px 0; border-radius: 16px; width: 100%;">
+                <div style="max-width: 1024px; margin: 0 auto;">
+                    <h2 style="font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 48px; line-height: 48px; color: #0f172a; margin-bottom: 80px; text-align: center; letter-spacing: -1.2px;">Schedule Your Lesson</h2>
+                    
+                    <form id="booking-form" style="display: flex; flex-direction: column; gap: 80px;">
+                        <!-- Personal Information -->
+                        <div style="background: #f8fafc; padding: 48px; border-radius: 16px; border: 1px solid #e2e8f0;">
+                            <h3 style="font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 30px; line-height: 36px; color: #0f172a; margin-bottom: 24px;">Personal Information</h3>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                                <div>
+                                    <label style="display: block; margin-bottom: 8px; font-family: 'Lexend', sans-serif; font-weight: 500; color: #374151; font-size: 18px;">First Name *</label>
+                                    <input type="text" required style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; font-family: 'Lexend', sans-serif;">
+                                </div>
+                                <div>
+                                    <label style="display: block; margin-bottom: 8px; font-family: 'Lexend', sans-serif; font-weight: 500; color: #374151; font-size: 18px;">Last Name *</label>
+                                    <input type="text" required style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; font-family: 'Lexend', sans-serif;">
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 24px;">
+                                <label style="display: block; margin-bottom: 8px; font-family: 'Lexend', sans-serif; font-weight: 500; color: #374151; font-size: 18px;">Email Address *</label>
+                                <input type="email" required style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; font-family: 'Lexend', sans-serif;">
+                            </div>
+                            
+                            <div style="margin-top: 24px;">
+                                <label style="display: block; margin-bottom: 8px; font-family: 'Lexend', sans-serif; font-weight: 500; color: #374151; font-size: 18px;">Phone Number</label>
+                                <input type="tel" style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; font-family: 'Lexend', sans-serif;">
+                            </div>
+                        </div>
+
+                        <!-- Lesson Details -->
+                        <div style="background: #f8fafc; padding: 48px; border-radius: 16px; border: 1px solid #e2e8f0;">
+                            <h3 style="font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 30px; line-height: 36px; color: #0f172a; margin-bottom: 24px;">Lesson Details</h3>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                                <div>
+                                    <label style="display: block; margin-bottom: 8px; font-family: 'Lexend', sans-serif; font-weight: 500; color: #374151; font-size: 18px;">Preferred Date *</label>
+                                    <input type="date" required style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; font-family: 'Lexend', sans-serif;">
+                                </div>
+                                <div>
+                                    <label style="display: block; margin-bottom: 8px; font-family: 'Lexend', sans-serif; font-weight: 500; color: #374151; font-size: 18px;">Preferred Time *</label>
+                                    <select required style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; font-family: 'Lexend', sans-serif;">
+                                        <option value="">Select time</option>
+                                        <option value="09:00">9:00 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="14:00">2:00 PM</option>
+                                        <option value="15:00">3:00 PM</option>
+                                        <option value="16:00">4:00 PM</option>
+                                        <option value="17:00">5:00 PM</option>
+                                        <option value="18:00">6:00 PM</option>
+                                        <option value="19:00">7:00 PM</option>
+                                        <option value="20:00">8:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 24px;">
+                                <label style="display: block; margin-bottom: 8px; font-family: 'Lexend', sans-serif; font-weight: 500; color: #374151; font-size: 18px;">Lesson Type *</label>
+                                <select required style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; font-family: 'Lexend', sans-serif;">
+                                    <option value="">Select lesson type</option>
+                                    <option value="trial">Trial Lesson (30 minutes)</option>
+                                    <option value="regular">Regular Lesson (60 minutes)</option>
+                                    <option value="extended">Extended Lesson (90 minutes)</option>
+                                    <option value="package">Package of 5 Lessons</option>
+                                </select>
+                            </div>
+                            
+                            <div style="margin-top: 24px;">
+                                <label style="display: block; margin-bottom: 8px; font-family: 'Lexend', sans-serif; font-weight: 500; color: #374151; font-size: 18px;">Learning Goals</label>
+                                <textarea style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; min-height: 100px; resize: vertical; font-family: 'Lexend', sans-serif;" placeholder="Tell us what you'd like to focus on during the lesson..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Payment Information -->
+                        <div style="background: #f8fafc; padding: 48px; border-radius: 16px; border: 1px solid #e2e8f0;">
+                            <h3 style="font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 30px; line-height: 36px; color: #0f172a; margin-bottom: 24px;">Payment Information</h3>
+                            
+                            <div>
+                                <label style="display: block; margin-bottom: 8px; font-family: 'Lexend', sans-serif; font-weight: 500; color: #374151; font-size: 18px;">Payment Method *</label>
+                                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+                                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; text-align: center; font-family: 'Lexend', sans-serif;">
+                                        <input type="radio" name="payment" value="card" required>
+                                        <span>Credit Card</span>
+                                    </label>
+                                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; text-align: center; font-family: 'Lexend', sans-serif;">
+                                        <input type="radio" name="payment" value="paypal">
+                                        <span>PayPal</span>
+                                    </label>
+                                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; text-align: center; font-family: 'Lexend', sans-serif;">
+                                        <input type="radio" name="payment" value="bank">
+                                        <span>Bank Transfer</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 24px;">
+                                <label style="display: block; margin-bottom: 8px; font-family: 'Lexend', sans-serif; font-weight: 500; color: #374151; font-size: 18px;">Card Number</label>
+                                <input type="text" placeholder="1234 5678 9012 3456" style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; font-family: 'Lexend', sans-serif;">
+                            </div>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px;">
+                                <div>
+                                    <label style="display: block; margin-bottom: 8px; font-family: 'Lexend', sans-serif; font-weight: 500; color: #374151; font-size: 18px;">Expiry Date</label>
+                                    <input type="text" placeholder="MM/YY" style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; font-family: 'Lexend', sans-serif;">
+                                </div>
+                                <div>
+                                    <label style="display: block; margin-bottom: 8px; font-family: 'Lexend', sans-serif; font-weight: 500; color: #374151; font-size: 18px;">CVV</label>
+                                    <input type="text" placeholder="123" style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; font-family: 'Lexend', sans-serif;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary -->
+                        <div style="background: #f8fafc; padding: 48px; border-radius: 16px; border: 2px solid #e2e8f0;">
+                            <h3 style="font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 30px; line-height: 36px; color: #0f172a; margin-bottom: 24px;">Booking Summary</h3>
+                            
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0;">
+                                <span id="summary-teacher-name" style="font-family: 'Lexend', sans-serif; font-weight: 400; font-size: 18px; color: #475569;">Teacher Name</span>
+                                <span id="summary-price" style="font-family: 'Lexend', sans-serif; font-weight: 400; font-size: 18px; color: #475569;">$25</span>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0;">
+                                <span style="font-family: 'Lexend', sans-serif; font-weight: 400; font-size: 18px; color: #475569;">Lesson Duration</span>
+                                <span id="summary-duration" style="font-family: 'Lexend', sans-serif; font-weight: 400; font-size: 18px; color: #475569;">60 minutes</span>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #e2e8f0;">
+                                <span style="font-family: 'Lexend', sans-serif; font-weight: 400; font-size: 18px; color: #475569;">Platform Fee</span>
+                                <span style="font-family: 'Lexend', sans-serif; font-weight: 400; font-size: 18px; color: #475569;">$5</span>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 32px;">
+                                <span style="font-family: 'Lexend', sans-serif; font-weight: 600; font-size: 18px; color: #0f172a;">Total</span>
+                                <span id="total-price" style="font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 24px; color: #0f7ff0;">$30</span>
+                            </div>
+                            
+                            <div style="background: #fef3c7; padding: 16px; border-radius: 8px; margin-bottom: 32px;">
+                                <p style="margin: 0; color: #92400e; font-size: 14px; font-family: 'Lexend', sans-serif;">
+                                    <strong>🎉 First Lesson Special:</strong> 20% off your first lesson with any teacher!
+                                </p>
+                            </div>
+                            
+                            <label style="display: flex; align-items: start; gap: 12px; cursor: pointer; margin-bottom: 32px;">
+                                <input type="checkbox" required style="margin-top: 4px;">
+                                <span style="font-size: 14px; color: #64748b; font-family: 'Lexend', sans-serif;">
+                                    I agree to Terms of Service and Privacy Policy. I understand that this booking is subject to cancellation policy.
+                                </span>
+                            </label>
+                            
+                            <button type="submit" style="background: #0f7ff0; color: white; border: none; padding: 16px 32px; border-radius: 8px; font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 18px; cursor: pointer; width: 100%; box-shadow: 0px 10px 15px -3px rgba(15,127,240,0.3), 0px 4px 6px -4px rgba(15,127,240,0.3);">
+                                Complete Booking
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: white; border-top: 1px solid #e2e8f0; padding: 48px 80px;">
+        <div style="max-width: 1024px; margin: 0 auto;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 16px; opacity: 0.5;">
+                    <div style="width: 24px; height: 24px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#0f7ff0" stroke-width="2"/>
+                            <path d="M12 6V12L16 18" stroke="#0f7ff0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div style="font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 14px; color: #0f7ff0; letter-spacing: -0.35px; text-transform: uppercase;">Lingoconnect © 2026</div>
+                </div>
+                
+                <div style="display: flex; gap: 32px;">
+                    <a href="#" style="font-family: 'Lexend', sans-serif; font-weight: 500; font-size: 12px; color: #64748b; text-decoration: none; letter-spacing: 1.2px; text-transform: uppercase;">Privacy</a>
+                    <a href="#" style="font-family: 'Lexend', sans-serif; font-weight: 500; font-size: 12px; color: #64748b; text-decoration: none; letter-spacing: 1.2px; text-transform: uppercase;">Terms</a>
+                    <a href="#" style="font-family: 'Lexend', sans-serif; font-weight: 500; font-size: 12px; color: #64748b; text-decoration: none; letter-spacing: 1.2px; text-transform: uppercase;">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get teacher details from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const teacherName = urlParams.get('teacher') || 'Teacher Name';
+        const teacherLanguage = urlParams.get('language') || 'Language';
+        const teacherPrice = urlParams.get('price') || '25';
+        const teacherImage = urlParams.get('image') || 'Images/teacher-placeholder.jpg';
+        const teacherCertification = urlParams.get('certification') || 'Certified';
+        const teacherExperience = urlParams.get('experience') || '5+ years';
+        const teacherDescription = urlParams.get('description') || 'Professional language teacher with extensive experience.';
+
+        // Update page with teacher details
+        document.getElementById('teacher-name').textContent = teacherName;
+        document.getElementById('teacher-language').textContent = teacherLanguage;
+        document.getElementById('teacher-price').textContent = '$' + teacherPrice;
+        document.getElementById('teacher-image').src = teacherImage;
+        document.getElementById('teacher-certification').textContent = teacherCertification;
+        document.getElementById('teacher-experience').textContent = teacherExperience;
+        document.getElementById('teacher-description').textContent = teacherDescription;
+        document.getElementById('summary-teacher-name').textContent = teacherName + ' - ' + teacherLanguage;
+        document.getElementById('summary-price').textContent = '$' + teacherPrice;
+        
+        const totalPrice = parseInt(teacherPrice) + 5; // Adding platform fee
+        document.getElementById('total-price').textContent = '$' + totalPrice;
+
+        // Handle form submission
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const successMessage = document.createElement('div');
+            successMessage.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: white;
+                padding: 40px;
+                border-radius: 12px;
+                box-shadow: 0px 20px 40px rgba(0,0,0,0.2);
+                text-align: center;
+                z-index: 1000;
+                max-width: 400px;
+            `;
+            successMessage.innerHTML = `
+                <div style="width: 80px; height: 80px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M12 20L18 26L28 14" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 style="font-size: 24px; margin-bottom: 12px; color: #0f172a; font-family: 'Lexend', sans-serif;">Booking Confirmed!</h3>
+                <p style="color: #64748b; margin-bottom: 20px; font-family: 'Lexend', sans-serif;">Your lesson with ${teacherName} has been scheduled. We'll send you a confirmation email shortly.</p>
+                <button onclick="window.location.href='find-teacher.html'" style="background: #0f7ff0; color: white; border: none; padding: 16px 32px; border-radius: 8px; font-family: 'Lexend', sans-serif; font-weight: 700; font-size: 18px; cursor: pointer;">Find More Teachers</button>
+            `;
+            
+            document.body.appendChild(successMessage);
+            
+            // Add overlay
+            const overlay = document.createElement('div');
+            overlay.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.5);
+                z-index: 999;
+            `;
+            document.body.appendChild(overlay);
+        });
+    </script>
+</body>
+</html>
