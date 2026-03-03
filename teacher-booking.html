@@ -159,7 +159,7 @@
                 <div style="max-width: 800px; margin: 0 auto;">
                     <h2 style="text-align: center; margin-bottom: 40px; font-size: 36px;">Schedule Your Lesson</h2>
                     
-                    <form id="booking-form" style="display: flex; flex-direction: column; gap: 30px;">
+                    <form id="booking-form" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
                         <!-- Personal Information -->
                         <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);">
                             <h3 style="font-size: 24px; margin-bottom: 24px; color: #0f172a;">Personal Information</h3>
@@ -272,9 +272,14 @@
                                     <input type="text" placeholder="123" style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px;">
                                 </div>
                             </div>
+                            
+                            <div style="margin-top: 20px;">
+                                <label style="display: block; margin-bottom: 8px; font-weight: 500; color: #374151;">Cardholder Name</label>
+                                <input type="text" style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px;">
+                            </div>
                         </div>
 
-                        <!-- Order Summary -->
+                        <!-- Booking Summary -->
                         <div style="background: #f8fafc; padding: 40px; border-radius: 12px; border: 2px solid #e2e8f0;">
                             <h3 style="font-size: 24px; margin-bottom: 24px; color: #0f172a;">Booking Summary</h3>
                             
@@ -311,9 +316,7 @@
                                 </span>
                             </label>
                             
-                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 18px; font-weight: 600;">
-                                Complete Booking
-                            </button>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 18px; font-weight: 600;">Complete Booking</button>
                         </div>
                     </form>
                 </div>
