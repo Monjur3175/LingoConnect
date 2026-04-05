@@ -1,6 +1,160 @@
 // LingoConnect - Interactive JavaScript
 
+let lcCurrentUser = null;
+
+async function lcCheckAuthStatus() {
+    try {
+        const response = await fetch('backend/api/check_auth.php', { method: 'GET' });
+        const data = await response.json();
+
+        if (data && data.success && data.authenticated) {
+            lcCurrentUser = data.user;
+        } else {
+            lcCurrentUser = null;
+        }
+
+        lcUpdateNavbar();
+    } catch (e) {
+        lcCurrentUser = null;
+    }
+}
+
+function lcUpdateNavbar() {
+    const headerButtons = document.querySelector('.header-buttons');
+    if (!headerButtons) return;
+
+    if (lcCurrentUser) {
+        headerButtons.innerHTML = `
+            <span style="margin-right: 15px; color: #475569; font-size: 14px;">Welcome, ${lcCurrentUser.name}</span>
+            <button type="button" class="btn btn-outline" id="lcLogoutBtn">Logout</button>
+        `;
+
+        const logoutBtn = document.getElementById('lcLogoutBtn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', lcLogout);
+        }
+    } else {
+        headerButtons.innerHTML = `
+            <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            <a href="login.html" class="btn btn-secondary">Login</a>
+        `;
+    }
+}
+
+async function lcHandleLogin(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email')?.value?.trim() || '';
+    const password = document.getElementById('password')?.value || '';
+
+    if (!email || !password) {
+        showMessage('Please fill in all fields', 'error');
+        return;
+    }
+
+    try {
+        const response = await fetch('backend/api/login.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+        if (data && data.success) {
+            lcCurrentUser = data.user;
+            showMessage('Login successful! Redirecting...', 'success');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 800);
+        } else {
+            showMessage(data?.message || 'Login failed', 'error');
+        }
+    } catch (e) {
+        showMessage('Login failed', 'error');
+    }
+}
+
+async function lcHandleSignup(event) {
+    event.preventDefault();
+
+    const fullname = document.getElementById('fullname')?.value?.trim() || '';
+    const email = document.getElementById('email')?.value?.trim() || '';
+    const password = document.getElementById('password')?.value || '';
+    const confirmPassword = document.getElementById('confirmPassword')?.value || '';
+    const language = document.getElementById('language')?.value || '';
+
+    if (!fullname || !email || !password || !confirmPassword || !language) {
+        showMessage('Please fill in all fields', 'error');
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        showMessage('Passwords do not match', 'error');
+        return;
+    }
+
+    try {
+        const response = await fetch('backend/api/signup.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ fullname, email, password, confirmPassword, language })
+        });
+
+        const data = await response.json();
+        if (data && data.success) {
+            showMessage('Account created! Redirecting to login...', 'success');
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 900);
+        } else {
+            showMessage(data?.message || 'Signup failed', 'error');
+        }
+    } catch (e) {
+        showMessage('Signup failed', 'error');
+    }
+}
+
+async function lcLogout() {
+    try {
+        await fetch('backend/api/logout.php', { method: 'GET' });
+    } catch (e) {
+        // ignore
+    }
+    lcCurrentUser = null;
+    lcUpdateNavbar();
+    showMessage('Logged out', 'success');
+}
+
+function showMessage(message, type) {
+    const messageDiv = document.createElement('div');
+    messageDiv.textContent = message;
+    messageDiv.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 16px 24px;
+        border-radius: 8px;
+        color: white;
+        font-weight: 500;
+        z-index: 10000;
+        animation: slideIn 0.3s ease;
+        ${type === 'error' ? 'background: #ef4444;' : 'background: #10b981;'}
+    `;
+
+    document.body.appendChild(messageDiv);
+
+    setTimeout(() => {
+        messageDiv.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => {
+            if (messageDiv.parentNode) {
+                document.body.removeChild(messageDiv);
+            }
+        }, 300);
+    }, 3000);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    lcCheckAuthStatus();
     // Mobile Navigation Toggle
     const mobileMenuToggle = document.createElement('button');
     mobileMenuToggle.innerHTML = '☰';
@@ -59,64 +213,48 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Form validation and submission
+    // Attach auth form handlers (do NOT let generic form handler intercept them)
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', lcHandleLogin);
+    }
+
+    const signupForm = document.getElementById('signupForm');
+    if (signupForm) {
+        signupForm.addEventListener('submit', lcHandleSignup);
+    }
+
+    // Form validation and submission (non-auth forms only)
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
+        if (form.id === 'loginForm' || form.id === 'signupForm') return;
+
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const emailInput = form.querySelector('input[type="email"]');
             const nameInput = form.querySelector('input[type="text"]');
             const messageInput = form.querySelector('textarea');
-            
-            // Basic validation
+
             if (emailInput && !emailInput.value.includes('@')) {
                 showMessage('Please enter a valid email address', 'error');
                 return;
             }
-            
+
             if (nameInput && nameInput.value.trim().length < 2) {
                 showMessage('Please enter your full name', 'error');
                 return;
             }
-            
+
             if (messageInput && messageInput.value.trim().length < 10) {
                 showMessage('Please enter a message with at least 10 characters', 'error');
                 return;
             }
-            
-            // Simulate form submission
+
             showMessage('Thank you for your message! We will get back to you soon.', 'success');
             form.reset();
         });
     });
-    
-    // Message display function
-    function showMessage(message, type) {
-        const messageDiv = document.createElement('div');
-        messageDiv.textContent = message;
-        messageDiv.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 16px 24px;
-            border-radius: 8px;
-            color: white;
-            font-weight: 500;
-            z-index: 10000;
-            animation: slideIn 0.3s ease;
-            ${type === 'error' ? 'background: #ef4444;' : 'background: #10b981;'}
-        `;
-        
-        document.body.appendChild(messageDiv);
-        
-        setTimeout(() => {
-            messageDiv.style.animation = 'slideOut 0.3s ease';
-            setTimeout(() => {
-                document.body.removeChild(messageDiv);
-            }, 300);
-        }, 3000);
-    }
     
     // Add CSS animations
     const style = document.createElement('style');
