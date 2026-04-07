@@ -1,4 +1,4 @@
-// LingoConnect - Interactive JavaScript
+// Virtual Connect - Interactive JavaScript
 
 let lcCurrentUser = null;
 
